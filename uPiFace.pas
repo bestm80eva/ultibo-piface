@@ -149,7 +149,7 @@ begin
   if not (no in [1..8]) then exit;
   GetInputs;
   mask := 1 shl (no - 1);
-  Result := (FInputs or mask) > 0;
+  Result := (FInputs and mask) > 0;
  end;
 
 function TPiFace.GetInputs: byte;
